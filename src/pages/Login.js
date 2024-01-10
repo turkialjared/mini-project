@@ -28,34 +28,46 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <div>
-        <h2>Login</h2>
-        <form onSubmit={handleFormSubmit}>
-          <div>
-            <label htmlFor="username">userName</label>
-            <input
-              type="username"
-              name="username"
-              id="username"
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mb-6">
-            <label htmlFor="password">Password</label>
-            <input
-              name="password"
-              type="password"
-              id="password"
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="flex justify-center">
-            <button type="submit">Login</button>
-          </div>
-        </form>
+    <div className=" d-flex justify-content-center align-items-center cc">
+      <div className="h-50 d-inline-block row justify-content-between rounded SS">
+        <div>
+          <h2 className="p-4">Login</h2>
+          <form onSubmit={handleFormSubmit}>
+            <div className="p-4">
+              <div className="mb-3">
+                <label htmlFor="username" className="form-label">
+                  Username
+                </label>
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  className="form-control rounded-pill"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="password" className="form-label">
+                  Password
+                </label>
+                <input
+                  name="password"
+                  type="password"
+                  id="password"
+                  className="form-control rounded-pill"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="d-flex justify-content-center p-4">
+              <button type="submit" className="btn btn-primary rounded-pill">
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

@@ -22,47 +22,55 @@ const Register = () => {
   };
 
   return (
-    <div
-      className="bg-body-secondary d-flex justify-content-center align-items-center"
-      style={{
-        height: "100vh",
-      }}
-    >
-      <div className="h-50 d-inline-block bg-primary row d-flex justify-content-space-between">
+    <div className="bg-body-secondary d-flex justify-content-center align-items-center cc">
+      <div className="h-75 d-inline-block row justify-content-between rounded SS">
         <form onSubmit={handleFormSubmit}>
-          <h2 className="p-4">Register</h2>
+          <h2 className="p-4 rounded ">Register</h2>
           <div className="p-4">
-            <label htmlFor="username">username</label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              onChange={handleChange}
-              required
-            />
+            <div className="mb-3">
+              <label htmlFor="username" className="form-label">
+                Username
+              </label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                className="form-control rounded-pill"
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="password" className="form-label">
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                className="form-control rounded-pill"
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="image" className="form-label">
+                Profile Image
+              </label>
+              <input
+                type="file"
+                id="image"
+                name="image"
+                className="form-control rounded-pill"
+                onChange={handleChange}
+                required
+              />
+            </div>
           </div>
-          <div className="mb-4">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mb-6 flex justify-center p-4 align-items-center">
-            <label htmlFor="image">Profile Image</label>
-            <input
-              type="file"
-              id="image"
-              name="image"
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="flex justify-center p-4">
-            <button type="submit">Register</button>
+          <div className="d-flex justify-content-center p-4">
+            <button type="submit" className="btn btn-primary rounded-pill">
+              Register
+            </button>
           </div>
         </form>
       </div>

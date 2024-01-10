@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+.SS {
+  background: linear-gradient(135deg, #337ab7, #5bc0de, #8ec2d0, #c3dde4);
+}
+.cc {
+  height: 100vh;
+
+  background: linear-gradient(135deg, #0052cc, #007bff, #0099ff, #00bfff);
+}
+.kk {
+  background: linear-gradient(135deg, #337ab7, #5bc0de, #8ec2d0, #c3dde4);
+  border-radius: 30px;
+  padding-top: 70px;
+}

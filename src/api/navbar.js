@@ -7,7 +7,7 @@ import { deleteToken } from "../storage/storage";
 const NavBar = () => {
   const [user, setUser] = useContext(UserContext);
   return (
-    <nav className="navbar navbar-expand-lg bg-success-subtle">
+    <nav className="navbar navbar-expand-lg  SS">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
           Bank
