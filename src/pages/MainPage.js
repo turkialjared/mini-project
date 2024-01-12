@@ -1,35 +1,26 @@
 import React, { useState } from "react";
 import { me } from "../api/auth";
 import { useQuery } from "@tanstack/react-query";
+import UserProfileCard from "../component.js/Userprofile";
 
 const MainPage = () => {
-  const { data: user } = useQuery({
+  const { data } = useQuery({
     queryKey: ["user"],
     queryFn: me,
   });
 
-  console.log(user?.image);
+  console.log(data?.image);
   return (
-    <div className="card text-center">
-      <div className="card-header">
-        <h2>My Profile</h2>
-      </div>
-      <div className="card-body">
-        {user ? (
-          <div>
-            <img
-              src={user?.image}
-              alt="User Profile"
-              className="img-fluid rounded-circle"
-              style={{ maxWidth: "200px" }}
-            />
-            <h3 className="card-title">Name: {user?.username}</h3>
-            <h3 className="card-title">Balance: {user?.balance}</h3>
-          </div>
-        ) : (
-          <p>Loading user profile...</p>
-        )}
-      </div>
+    <div>
+      {data ? (
+        <UserProfileCard
+          username={data.username}
+          image={data?.image}
+          balance={data?.balance}
+        />
+      ) : (
+        <p>Loading user profile...</p>
+      )}
     </div>
   );
 };
