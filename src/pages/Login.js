@@ -26,11 +26,20 @@ const Login = () => {
     e.preventDefault();
     mutate();
   };
+  const backgroundImageStyle = {
+    backgroundImage: 'url("bank.jpeg")',
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "100vh", // Adjust the height as needed
+  };
 
   return (
-    <div className=" d-flex justify-content-center align-items-center cc">
-      <div className="h-50 d-inline-block row justify-content-between rounded SS">
-        <div>
+    <div
+      style={backgroundImageStyle}
+      className=" d-flex justify-content-center align-items-center cc"
+    >
+      <div>
+        <div className="h-50 d-inline-block row justify-content-between rounded SS">
           <h2 className="p-4">Login</h2>
           <form onSubmit={handleFormSubmit}>
             <div className="p-4">

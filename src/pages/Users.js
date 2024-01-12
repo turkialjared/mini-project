@@ -16,7 +16,7 @@ const Users = () => {
   return (
     <div className="mt-4 mx-10">
       {isLoading ? (
-        <>is Loading</>
+        <>is Loading..</>
       ) : (
         <div className="grid grid-cols-3 gap-3 ">{usersCard}</div>
       )}

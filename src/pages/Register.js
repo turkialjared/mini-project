@@ -20,9 +20,17 @@ const Register = () => {
 
     mutate();
   };
-
+  const backgroundImageStyle = {
+    backgroundImage: 'url("bank.jpeg")',
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "100vh", // Adjust the height as needed
+  };
   return (
-    <div className="bg-body-secondary d-flex justify-content-center align-items-center cc">
+    <div
+      style={backgroundImageStyle}
+      className="bg-body-secondary d-flex justify-content-center align-items-center cc"
+    >
       <div className="h-75 d-inline-block row justify-content-between rounded SS">
         <form onSubmit={handleFormSubmit}>
           <h2 className="p-4 rounded ">Register</h2>
