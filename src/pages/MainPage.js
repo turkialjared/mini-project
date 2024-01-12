@@ -8,7 +8,7 @@ const MainPage = () => {
     queryFn: me,
   });
 
-  console.log(user.image);
+  console.log(user?.image);
   return (
     <div className="card text-center">
       <div className="card-header">
@@ -18,12 +18,13 @@ const MainPage = () => {
         {user ? (
           <div>
             <img
-              src={user.image}
+              src={user?.image}
               alt="User Profile"
               className="img-fluid rounded-circle"
               style={{ maxWidth: "200px" }}
             />
-            <h3 className="card-title">Name: {user.username}</h3>
+            <h3 className="card-title">Name: {user?.username}</h3>
+            <h3 className="card-title">Balance: {user?.balance}</h3>
           </div>
         ) : (
           <p>Loading user profile...</p>

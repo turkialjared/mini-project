@@ -7,6 +7,8 @@ import { useState } from "react";
 import Login from "./pages/Login";
 import MainPage from "./pages/MainPage";
 import Home from "./pages/Home";
+import Transactions from "./pages/Transactions";
+import Users from "./pages/Users";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -19,6 +21,8 @@ function App() {
           <Route path="/register" Component={Register} />
           <Route path="/login" Component={Login} />
           <Route path="/mainPage" Component={MainPage} />
+          <Route path="/transactions" Component={Transactions} />
+          <Route path="/users" Component={Users} />
         </Routes>
       </div>
     </UserContext.Provider>
