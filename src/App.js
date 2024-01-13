@@ -9,6 +9,7 @@ import MainPage from "./pages/MainPage";
 import Home from "./pages/Home";
 import Transactions from "./pages/Transactions";
 import Users from "./pages/Users";
+import Account from "./pages/Account";
 
 function App() {
   const [user, setUser] = useState(false);
@@ -23,6 +24,7 @@ function App() {
           <Route path="/mainPage" Component={MainPage} />
           <Route path="/transactions" Component={Transactions} />
           <Route path="/users" Component={Users} />
+          <Route path="/account" Component={Account} />
         </Routes>
       </div>
     </UserContext.Provider>

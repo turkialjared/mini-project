@@ -9,11 +9,19 @@ const Home = () => {
   };
   return (
     <div style={backgroundImageStyle}>
-      <div className="float-md-left ">
-        <div className="w-25  d-inline-block row d-flex justify-content-space-between kk ">
-          <h1> This Project Is Made By </h1>
-          <h3>Amal Alzabi</h3>
-          <h3>Turki Almutairi</h3>
+      <div
+        className="d-flex justify-content-center align-items-center "
+        style={{ height: "100vh" }}
+      >
+        <div className="float-md-left ">
+          <div
+            className="d-inline-block row d-flex justify-content-space-between kk"
+            style={{ width: "700px", height: "350px" }}
+          >
+            <h1> This Project Is Made By </h1>
+            <h3>Amal Alzabi</h3>
+            <h3>Turki Almutairi</h3>
+          </div>
         </div>
       </div>
     </div>

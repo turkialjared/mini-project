@@ -1,6 +1,6 @@
-import React from "react";
-import { useQuery } from "@tanstack/react-query";
-import { getAllUsers } from "../api/auth";
+import React, { useState } from "react";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { getAllUsers, transferMoney } from "../api/auth";
 import UserCard from "../component.js/UserCard";
 
 const Users = () => {
@@ -14,11 +14,21 @@ const Users = () => {
   ));
 
   return (
-    <div className="mt-4 mx-10">
+    <div className=" mx-10 SS">
       {isLoading ? (
         <>is Loading..</>
       ) : (
-        <div className="grid grid-cols-3 gap-3 ">{usersCard}</div>
+        <div
+          className="grid grid-cols-3 gap-3 "
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            flexWrap: "wrap",
+          }}
+        >
+          {usersCard}
+        </div>
       )}
     </div>
   );

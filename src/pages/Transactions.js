@@ -1,6 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
 import { my } from "../api/auth";
-import UserProfileCard from "../component.js/Userprofile";
 
 const Transactions = () => {
   const { data: transactions, isLoading } = useQuery({
@@ -8,16 +7,14 @@ const Transactions = () => {
     queryFn: my,
   });
 
-  const mytransactions = transactions?.filter((trans) =>
-    trans.amount.toString()
-  );
+  const mytransactions = transactions?.map((trans) => trans.amount);
   console.log(mytransactions);
   return (
     <>
       {isLoading ? (
         <>is Loading..</>
       ) : (
-        <h3>username={transactions.data} balanc</h3>
+        <h3>username={mytransactions} balance</h3>
       )}
     </>
   );

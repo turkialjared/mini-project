@@ -24,7 +24,7 @@ const Register = () => {
     backgroundImage: 'url("bank.jpeg")',
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: "100vh", // Adjust the height as needed
+    height: "100vh",
   };
   return (
     <div

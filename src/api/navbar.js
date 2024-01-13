@@ -25,6 +25,13 @@ const NavBar = () => {
                     profile
                   </NavLink>
                 </li>
+                <NavLink
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/account"
+                >
+                  Deposit & withdraw
+                </NavLink>
                 <li className="nav-item">
                   <NavLink
                     className="nav-link active"
