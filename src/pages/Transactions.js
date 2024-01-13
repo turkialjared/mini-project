@@ -18,7 +18,19 @@ const Transactions = () => {
         <>is Loading..</>
       ) : (
         <>
-          <h3>{mytransaction}</h3>
+          <div style={{ height: "100px" }}>
+            <h1 className="m-5">This is the transactions page</h1>
+          </div>
+          <h3
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "space-evenly",
+            }}
+          >
+            {mytransaction}
+          </h3>
         </>
       )}
     </>

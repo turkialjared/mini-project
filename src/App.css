@@ -81,3 +81,12 @@
   box-sizing: border-box;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
+.zz {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  gap: 30px;
+}
