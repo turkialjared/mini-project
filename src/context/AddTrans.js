@@ -10,9 +10,6 @@ const AddTrans = ({ show, onClose, onSave }) => {
         username,
         amounts: amount,
       }),
-    onSuccess: () => {
-      onClose();
-    },
   });
   const handelTrans = (e) => {
     setTrans(r.target.value);
