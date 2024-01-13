@@ -2,7 +2,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import React, { useState } from "react";
 import { transferMoney } from "../api/auth";
 
-const UserCard = ({ image, username, addClass, profile }) => {
+const UserCard = ({ image, username, addClass, profile, balance }) => {
   const [amount, setAmount] = useState(0);
   const queryClient = useQueryClient();
 
@@ -35,6 +35,7 @@ const UserCard = ({ image, username, addClass, profile }) => {
       </figure>
       <div className="card-body m-4">
         <h5 className="card-title mb-1">{username}</h5>
+        <h5>{balance}</h5>
         <div class="input-group mb-3">
           <button
             onClick={handleFormSubmit}
@@ -50,6 +51,8 @@ const UserCard = ({ image, username, addClass, profile }) => {
             placeholder=""
             aria-label="Example text with button addon"
             aria-describedby="button-addon1"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
           />
         </div>
       </div>

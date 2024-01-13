@@ -14,7 +14,7 @@ const MainPage = () => {
     <div>
       {data ? (
         <UserProfileCard
-          username={data.username}
+          username={data?.username}
           image={data?.image}
           balance={data?.balance}
         />

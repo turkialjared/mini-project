@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { my } from "../api/auth";
+import Usertrans from "../component.js/Usertrans";
 
 const Transactions = () => {
   const { data: transactions, isLoading } = useQuery({
@@ -7,14 +8,18 @@ const Transactions = () => {
     queryFn: my,
   });
 
-  const mytransactions = transactions?.map((trans) => trans.amount);
-  console.log(mytransactions);
+  const mytransaction = transactions
+    ?.filter((trans) => trans.type)
+    .map((trans) => <Usertrans amount={trans.amount} type={trans.type} />);
+  console.log(mytransaction);
   return (
     <>
       {isLoading ? (
         <>is Loading..</>
       ) : (
-        <h3>username={mytransactions} balance</h3>
+        <>
+          <h3>{mytransaction}</h3>
+        </>
       )}
     </>
   );

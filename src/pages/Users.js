@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import { getAllUsers, transferMoney } from "../api/auth";
 import UserCard from "../component.js/UserCard";
 
@@ -8,9 +7,18 @@ const Users = () => {
     queryKey: ["users"],
     queryFn: () => getAllUsers(),
   });
+  const { data: amount } = useMutation({
+    mutationKey: ["amount"],
+    mutationFn: transferMoney,
+  });
 
   const usersCard = users?.map((user) => (
-    <UserCard key={user.id} image={user.image} username={user.username} />
+    <UserCard
+      key={user.id}
+      image={user.image}
+      username={user.username}
+      balance={user.balance}
+    />
   ));
 
   return (
