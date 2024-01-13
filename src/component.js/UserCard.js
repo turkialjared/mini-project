@@ -28,9 +28,12 @@ const UserCard = ({ image, username, addClass, profile, balance }) => {
     >
       <figure className="px-5 pt-5">
         <img
-          src={image}
+          src={`https://react-bank-project.eapi.joincoded.com/${image}`}
           alt="User Profile"
           className={profile ? addClass : "w-24 h-24 rounded-full mb-4"}
+          style={{
+            width: "100px",
+          }}
         />
       </figure>
       <div className="card-body m-4">

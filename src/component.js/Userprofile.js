@@ -14,9 +14,12 @@ const UserProfileCard = ({ username, image, balance }) => {
             style={{ height: "325px" }}
           >
             <img
-              src={image}
+              src={`https://react-bank-project.eapi.joincoded.com/${image}`}
               alt="User Profile"
-              className="card-img-top img-fluid rounded-circle mb-5"
+              className="card-img img-fluid rounded-circle mb-5"
+              style={{
+                width: "100px",
+              }}
             />
             <div className="card-body text-center">
               <h2 className="card-title mb-5">Welcome {username}</h2>

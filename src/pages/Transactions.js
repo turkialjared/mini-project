@@ -11,7 +11,7 @@ const Transactions = () => {
   const mytransaction = transactions
     ?.filter((trans) => trans.type)
     .map((trans) => <Usertrans amount={trans.amount} type={trans.type} />);
-  console.log(mytransaction);
+  console.log(transactions);
   return (
     <>
       {isLoading ? (
