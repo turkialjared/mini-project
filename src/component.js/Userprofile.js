@@ -8,18 +8,16 @@ const UserProfileCard = ({ username, image, balance }) => {
       }}
     >
       <div className="d-flex row justify-content-center ">
-        <div className="col-md-6 justify-content-between">
+        <div className="col-md-6 d-flex justify-content-center">
           <div
-            className="card mt-5 justify-content-between SS"
+            className="card mt-5 justify-content-space-between SS text-center w-50"
             style={{ height: "325px" }}
           >
             <img
               src={`https://react-bank-project.eapi.joincoded.com/${image}`}
               alt="User Profile"
-              className="card-img img-fluid rounded-circle mb-5"
-              style={{
-                width: "100px",
-              }}
+              className="rounded d-block mx-auto mb-5 mt-5"
+              style={{ width: "100px" }}
             />
             <div className="card-body text-center">
               <h2 className="card-title mb-5">Welcome {username}</h2>

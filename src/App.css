@@ -90,3 +90,15 @@
   height: 400px;
   gap: 30px;
 }
+.pp {
+  width: "70px";
+  height: "30px";
+  border-radius: "17px";
+}
+.qq {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}

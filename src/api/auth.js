@@ -52,6 +52,10 @@ const getAllUsers = async () => {
   const { data } = await instance.get("/mini-project/api/auth/users");
   return data;
 };
+const getUserById = async (id) => {
+  const { data } = await instance.get(`/mini-project/api/auth/user/${id}`);
+  return data;
+};
 
 const transferMoney = async (userInfo) => {
   const { data } = await instance.put(
@@ -70,4 +74,5 @@ export {
   transferMoney,
   withdraw,
   deposit,
+  getUserById,
 };
