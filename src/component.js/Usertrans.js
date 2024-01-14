@@ -1,6 +1,6 @@
 import React from "react";
 
-const Usertrans = ({ amount, type }) => {
+const Usertrans = ({ amount, type, key }) => {
   return (
     <div
       style={{
